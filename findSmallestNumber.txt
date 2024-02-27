@@ -1,0 +1,30 @@
+function smallestNumber(num1, num2){
+
+    for(var i = num1; i < num2; i++){
+        var oneX = i.toString()
+        var twoX = i * 2;
+        var threeX = i * 3;
+        var fourX = i * 4;
+        var fiveX = i * 5;
+        var sixX = i * 6;
+
+        var sortedOriginal = oneX.split('').sort().join('');
+        var sortedTwoX = twoX.toString().split('').sort().join('');
+        var sortedThreeX = threeX.toString().split('').sort().join('');
+        var sortedFourX = fourX.toString().split('').sort().join('');
+        var sortedFiveX = fiveX.toString().split('').sort().join('');
+        var sortedSixX = sixX.toString().split('').sort().join('');
+
+        if(sortedOriginal === sortedTwoX && sortedOriginal === sortedThreeX && sortedOriginal === sortedFourX && sortedOriginal === sortedFiveX && sortedSixX === sortedOriginal){
+            gs.info(i + ' x 2 : ' + i * 2)
+            gs.info(i + ' x 3 : ' + i * 3)
+            gs.info(i + ' x 4 : ' + i * 4)
+            gs.info(i + ' x 5 : ' + i * 5)
+            gs.info(i + ' x 6 : ' + i * 6)
+            return i
+        }
+    }
+}
+var result = (smallestNumber(100000, 1000000))
+gs.info('Smallest number is : ' + result)
+
